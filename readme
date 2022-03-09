@@ -1,0 +1,16 @@
+Configure AWS kubectl:
+- aws configure
+- aws sts get-caller-identity   (check current identity)
+- aws eks --region us-east-1 update-kubeconfig --name test_cluster
+- kubectl get pods --kubeconfig %USERPROFILE%\.kube\config
+- linux : kubectl get pods --kubeconfig ./.kube/config
+
+Test Config:
+- kubectl get svc
+
+Test Nodes:
+- kubectl get nodes
+-  kubectl describe node <node name>
+
+
+Deploy Test App:
